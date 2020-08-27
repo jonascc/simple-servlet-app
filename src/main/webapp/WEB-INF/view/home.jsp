@@ -8,31 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="float: right">
-	
-		<c:choose>
-			<c:when test="${isSignedIn}">
-				<span>User's name</span>
-			</c:when>
-			<c:otherwise>
-				<a href="">Sign in</a>
-				<a href="">Sign up</a>
-			</c:otherwise>
-		</c:choose>
-		
-		<a href="">Sign out</a>
-	</div>
+	<c:import url="menu.jsp" />
 	
 	<h1>HOME PAGE</h1>
-	
-	<div>
-		<a href="">User's area</a>
-		
-		<c:if test="${isSignedIn}">
-			<a href="">Update account</a>
-			<a href="">Remove account</a>
-		</c:if>
-	</div>
 	
 </body>
 </html>
