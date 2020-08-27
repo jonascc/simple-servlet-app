@@ -1,5 +1,13 @@
 package servletapp.action;
 
-public class SignOut {
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SignOut implements Action{
+
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
