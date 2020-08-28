@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>    
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="app" var="linkApp" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +9,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:import url="menu.jsp" />
+	<c:import url="menu.jsp" />
 
-Sign up form here
+	<h1>Sign up</h1>
+
+	<form action="${linkApp}" method="post" >
+		Name: <input type="text" name="name"/>
+		<br />
+		<br />
+		Last name: <input type="text" name="lastName" />
+		<br />
+		<br />
+		Date of birth: <input type="text" name="dateBirth" />
+		<br />
+		<br />
+		Password: <input type="password" name="password" />
+		<br />
+		<br />
+		<input type="submit" value="Send" />
+		<input type="hidden" name="action" value="SignUp"/>
+	</form>
 
 </body>
 </html>
