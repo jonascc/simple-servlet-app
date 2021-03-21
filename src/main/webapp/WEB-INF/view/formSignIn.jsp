@@ -21,7 +21,7 @@
 		<br />
 		<br />
 		<input type="submit" value="Send" />
-		<input type="hidden" name="acao" value="SignIn" />
+		<input type="hidden" name="action" value="SignIn" />
 	</form>
 
 </body>
