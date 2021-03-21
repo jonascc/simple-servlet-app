@@ -13,7 +13,7 @@
 	<div style="float: right">
 		<c:choose>
 			<c:when test="${isSignedIn}">
-				<span>Hello, ${usersName}</span>
+				<span>Hello, ${signedInUser.name}</span>
 			</c:when>
 			<c:otherwise>
 				<a href="${linkApp}SignInForm">Sign in</a>
@@ -21,12 +21,12 @@
 			</c:otherwise>
 		</c:choose>
 
-		<a href="">Sign out</a>
+		<a href="${linkApp}SignOut">Sign out</a>
 	</div>
 
 	<div>
 		<a href="${linkHome}">Home</a>
-		<a href="">User's area</a>
+		<a href="${linkApp}UserPage">User's page</a>
 
 		<c:if test="${isSignedIn}">
 			<a href="">Update account</a>
