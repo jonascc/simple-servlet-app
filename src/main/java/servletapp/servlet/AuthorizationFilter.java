@@ -47,10 +47,10 @@ public class AuthorizationFilter implements Filter {
 
 		String actionParam = request.getParameter("action") != null ? request.getParameter("action") : "";
 		boolean isRestrictArea = !actionParam.equals("SignIn") && !actionParam.equals("SignInForm")
-				&& !actionParam.equals("SignUpForm");
+				&& !actionParam.equals("SignUpForm") && !actionParam.equals("SignUp");
 
 		if (!isSignedIn && isRestrictArea) {
-			response.sendRedirect("/simple-servlet-app/");
+			response.sendRedirect("app?action=SignInForm");
 		} else {
 			chain.doFilter(request, response);
 		}
