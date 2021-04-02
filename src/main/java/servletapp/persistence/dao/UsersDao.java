@@ -61,5 +61,29 @@ private final Connection con;
 		
 	}
 	
+	public void deleteUser(User user) throws SQLException {
+		String sql = "delete from users where id = ?";
+		
+		try (PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+			stmt.setInt(1, user.getId());
+			
+			stmt.execute();
+		}
+		
+	}
+	
+	public void updateUser(User user) throws SQLException {
+		String sql = "update users set name = ?, lastName = ? where id = ?";
+		
+		try (PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+			stmt.setString(1, user.getName());
+			stmt.setString(2, user.getLastName());
+			stmt.setInt(3, user.getId());
+			
+			stmt.execute();
+		}
+		
+	}
+	
 
 }
