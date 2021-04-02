@@ -29,8 +29,8 @@
 		<a href="${linkApp}UserPage">User's page</a>
 
 		<c:if test="${isSignedIn}">
-			<a href="">Update account</a>
-			<a href="">Remove account</a>
+			<a href="${linkApp}UpdateAccountForm">Update account</a>
+			<a href="${linkApp}DeleteAccountForm">Delete account</a>
 		</c:if>
 	</div>
 
